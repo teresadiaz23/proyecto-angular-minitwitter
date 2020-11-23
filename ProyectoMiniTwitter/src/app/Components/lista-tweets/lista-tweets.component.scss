@@ -1,0 +1,21 @@
+.tweet {
+    max-width: 600px;
+    margin: auto;
+}
+  
+.encabezado {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+.icono{
+    border: none;
+    background-color: white;
+    
+}
+.fav{
+    color: gray;
+}
+.icono:hover{
+    color: red;
+}
