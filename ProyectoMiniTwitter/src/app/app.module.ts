@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
 import { LoginComponent } from './Components/login/login.component';
 import { RegistroComponent } from './Components/registro/registro.component';
 import { InicioSesionComponent } from './Views/inicio-sesion/inicio-sesion.component';
@@ -11,10 +13,15 @@ import { RegistroUsuarioComponent } from './Views/registro-usuario/registro-usua
 import { ListaTweetsComponent } from './Components/lista-tweets/lista-tweets.component';
 import { VisualizarTweetsComponent } from './Views/visualizar-tweets/visualizar-tweets.component';
 import { MenuComponent } from './Menu/menu/menu.component';
+import { AuthService } from './Services/auth.service';
+
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatCardModule } from "@angular/material/card";
 import { MatIconModule } from "@angular/material/icon";
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -31,12 +38,15 @@ import { MatIconModule } from "@angular/material/icon";
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatToolbarModule,
     MatSidenavModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    FlexLayoutModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

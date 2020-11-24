@@ -8,8 +8,8 @@ import { VisualizarTweetsComponent } from './Views/visualizar-tweets/visualizar-
 const routes: Routes = [
   //{ path: '', component: MenuComponent},
   { path: 'login', component: InicioSesionComponent},
-  { path: 'registro', component: RegistroUsuarioComponent},
-  { path: 'tweets', component: VisualizarTweetsComponent}
+  { path: 'signup', component: RegistroUsuarioComponent},
+  { path: 'tweets/all', component: VisualizarTweetsComponent}
 ];
 
 
