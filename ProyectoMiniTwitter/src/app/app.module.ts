@@ -14,13 +14,15 @@ import { ListaTweetsComponent } from './Components/lista-tweets/lista-tweets.com
 import { VisualizarTweetsComponent } from './Views/visualizar-tweets/visualizar-tweets.component';
 import { MenuComponent } from './Menu/menu/menu.component';
 import { AuthService } from './Services/auth.service';
+import { RegistroService } from "./Services/registro.service";
+import { TweetService } from "./Services/tweet.service";
 
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatCardModule } from "@angular/material/card";
 import { MatIconModule } from "@angular/material/icon";
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, FormBuilder} from '@angular/forms';
 
 
 @NgModule({
@@ -46,7 +48,7 @@ import { FormsModule } from '@angular/forms';
     FlexLayoutModule,
     FormsModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, RegistroService, TweetService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

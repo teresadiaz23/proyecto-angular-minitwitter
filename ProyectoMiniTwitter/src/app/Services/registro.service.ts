@@ -6,13 +6,11 @@ import { SignupResponse } from "../Interfaces/signup-response.interface";
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-const LOGIN_URL = 'https://www.minitwitter.com:3001/apiv1/auth/login';
-
+const SINGUP_URL = 'https://www.minitwitter.com:3001/apiv1/auth/signup';
 
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type':  'application/json',
-    
   })
 };
 
@@ -20,18 +18,17 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class RegistroService {
 
   constructor(private http: HttpClient) { }
 
-  login(loginDto: LoginDto): Observable<LoginResponse> {
-    return this.http.post<LoginResponse>(
-      LOGIN_URL,
-      loginDto,
+
+  signup(singupDto: SignupDto): Observable<SignupResponse>{
+    return this.http.post<SignupResponse>(
+      SINGUP_URL,
+      singupDto,
       httpOptions
-    );
-    
+    )
+
   }
-
-
 }
