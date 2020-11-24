@@ -24,6 +24,8 @@ export class LoginComponent implements OnInit {
   doLogin() {
     this.authService.login(this.usuario).subscribe(respuesta => {
       alert('API TOKEN ' + respuesta.token);
+      localStorage.setItem('token', respuesta.token);
+      
       
     })
   }

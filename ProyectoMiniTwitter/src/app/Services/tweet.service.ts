@@ -6,13 +6,14 @@ import { SignupResponse } from "../Interfaces/signup-response.interface";
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-const LOGIN_URL = 'https://www.minitwitter.com:3001/apiv1/auth/login';
+const TWEET_URL = 'https://www.minitwitter.com:3001/apiv1/tweets/all';
 
+const token = localStorage.getItem('token');
 
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type':  'application/json',
-    
+    'Authorization': 'Bearer ' + token
   })
 };
 
@@ -20,18 +21,22 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class TweetService {
 
   constructor(private http: HttpClient) { }
 
-  login(loginDto: LoginDto): Observable<LoginResponse> {
-    return this.http.post<LoginResponse>(
-      LOGIN_URL,
-      loginDto,
-      httpOptions
-    );
-    
+  mostrarTweets(){
+
   }
+
+  // login(loginDto: LoginDto): Observable<LoginResponse> {
+  //   return this.http.post<LoginResponse>(
+  //     LOGIN_URL,
+  //     loginDto,
+  //     httpOptions
+  //   );
+    
+  // }
 
 
 }
