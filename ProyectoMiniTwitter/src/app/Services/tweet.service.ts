@@ -5,6 +5,7 @@ import { LoginResponse } from '../Interfaces/login-response.interface';
 import { SignupResponse } from "../Interfaces/signup-response.interface";
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { TweetResponse } from '../Interfaces/tweet-response.interface';
 
 const TWEET_URL = 'https://www.minitwitter.com:3001/apiv1/tweets/all';
 
@@ -23,10 +24,18 @@ const httpOptions = {
 })
 export class TweetService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    
+  }
 
-  mostrarTweets(){
+  
 
+
+  tweets(): Observable<TweetResponse[]>{
+    return this.http.get<TweetResponse[]>(
+      TWEET_URL,
+      httpOptions
+    )
   }
 
   // login(loginDto: LoginDto): Observable<LoginResponse> {
@@ -37,6 +46,8 @@ export class TweetService {
   //   );
     
   // }
+
+  
 
 
 }
