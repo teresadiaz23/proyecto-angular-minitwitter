@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SignupDto } from "../../DTO/signup.dto";
+import { AuthService } from '../../Services/auth.service';
 
 @Component({
   selector: 'app-registro',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroComponent implements OnInit {
 
-  constructor() { }
+  usuario: SignupDto;
+
+  constructor(private authService: AuthService) {
+    this.usuario = new SignupDto('','','','UDEMYCODE');
+    //this.usuario = new LoginDto('', '');
+
+   }
 
   ngOnInit(): void {
+  }
+
+  doSignup(){
+    
   }
 
 }
