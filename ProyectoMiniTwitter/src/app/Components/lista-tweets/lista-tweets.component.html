@@ -1,4 +1,32 @@
-<div class="container">
+<main><h1>Inicio</h1>
+<div class="container mb-5"></div>
+<div class="container mb-3 col-5" *ngFor="let tweet of tweets">
+  <mat-card class="tweet">
+    <mat-card-header>
+      <div mat-card-avatar class="encabezado"></div>
+      <mat-card-title><span>{{tweet.user.username}}</span> <span class="text-secondary">{{tweet.user.email}}</span></mat-card-title>
+      <mat-card-subtitle></mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+          {{tweet.mensaje}}
+        </p>
+      </mat-card-content>
+    <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+    
+    <mat-card-actions>
+      <button class="icono" mat-icon-button><mat-icon class="fav" aria-hidden="false">favorite_border</mat-icon></button>
+     
+      <button class="icono" mat-icon-button><mat-icon  aria-hidden="false">share</mat-icon></button>
+      
+    </mat-card-actions>
+  </mat-card>
+  
+</div>
+</main>
+
+
+<!-- <div class="container" *ngFor="tweet of tweets">
   <mat-card class="tweet">
     <mat-card-header>
       <div mat-card-avatar class="encabezado"></div>
@@ -12,9 +40,9 @@
           bred for hunting.
         </p>
       </mat-card-content>
-    <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
     
-    <mat-card-actions>
+    <!-- <mat-card-actions>
       <button class="icono" mat-icon-button><mat-icon class="fav" aria-hidden="false">favorite_border</mat-icon></button>
      
       <button class="icono" mat-icon-button><mat-icon  aria-hidden="false">share</mat-icon></button>
@@ -22,4 +50,4 @@
     </mat-card-actions>
   </mat-card>
 
-</div>
+</div> -->

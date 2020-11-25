@@ -1,7 +1,41 @@
-.tweet {
-    max-width: 600px;
-    margin: auto;
+$topnav-background-color: #222;
+
+main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    background: $topnav-background-color;
+    text-align: left;
+    color: #fff;
+    padding: 3em;
+
+    
+
 }
+h1 {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 19px;
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+}
+
+
+// .tweet {
+//     max-width: 600px;
+//     margin: auto;
+// }
+// .tweet{
+//     background-color: $topnav-background-color;
+//     color: white;
+//     border: 1px solid white;
+// }
   
 .encabezado {
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
