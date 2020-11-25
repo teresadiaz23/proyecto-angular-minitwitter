@@ -1,3 +1,4 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { SignupDto } from "../../DTO/signup.dto";
 import { RegistroService } from '../../Services/registro.service';
@@ -11,10 +12,15 @@ import { RegistroService } from '../../Services/registro.service';
 export class RegistroComponent implements OnInit {
 
   usuario: SignupDto;
-  submitted = false;
+  //submitted = false;
+  username: string;
+  email: string;
+  password: string;
+  code: string;
+  
 
   constructor(private registroService: RegistroService) {
-    this.usuario = new SignupDto('','','','UDEMYCODE');
+    this.usuario = new SignupDto('','','','');
     
 
   }
@@ -41,16 +47,28 @@ export class RegistroComponent implements OnInit {
 
   
 
-  doSignup(){
-    this.registroService.signup(this.usuario).subscribe(respuesta => {
-      //alert('API TOKEN ' + respuesta.token);
-      for (const key in this.usuario) {
-        if (Object.prototype.hasOwnProperty.call(this.usuario, key)) {;
-          console.log(key, this.usuario[key]);
-        }
-      }
-      localStorage.setItem('token', respuesta.token);
-    })
+  registrarse(){
+    const user = { username: this.username, email: this.email, password: this.password, code: this.code};
+    console.log(user);
+    
+    // this.registroService.signup(this.usuario).subscribe(respuesta => {
+    //   alert('API TOKEN ' + respuesta.token);
+    //   localStorage.setItem('token', respuesta.token);
+    // });
+
+    // register() {
+    //   const user = { email: this.email, password: this.password };
+    //   this.userService.register(user).subscribe(data => {
+    //     console.log(data);
+    //   });
+    // }
+    // console.log(this.usuario.email);
+    // console.log(this.usuario.username);
+    // for (const key in this.usuario) {
+    //   if (Object.prototype.hasOwnProperty.call(this.usuario, key)) {;
+    //     console.log(key, this.usuario[key]);
+    //   }
+    // }
     
   }
   // doSignup(){
