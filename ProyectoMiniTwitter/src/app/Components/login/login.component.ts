@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
   usuario: LoginDto;
 
   constructor(private authService: AuthService) {
-    this.usuario = new LoginDto('', '');
+   this.usuario = new LoginDto('', '');
     
   }
   //constructor(){} 
@@ -27,8 +27,10 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('token', respuesta.token);
       
       
-    })
+    });
+    
   }
+  
 
 
 }

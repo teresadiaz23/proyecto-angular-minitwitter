@@ -1,5 +1,6 @@
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
-import { Component, OnInit } from '@angular/core';
+//import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { SignupDto } from "../../DTO/signup.dto";
 import { RegistroService } from '../../Services/registro.service';
 //import { FormBuilder} from '@angular/forms';
@@ -11,16 +12,23 @@ import { RegistroService } from '../../Services/registro.service';
 })
 export class RegistroComponent implements OnInit {
 
-  usuario: SignupDto;
-  //submitted = false;
-  username: string;
-  email: string;
-  password: string;
-  code: string;
+  @ViewChild('formreg') formreg: NgForm;
+  usuario: any;
+  submitted = false;
+  // username: string;
+  // email: string;
+  // password: string;
+  // code: string;
   
 
   constructor(private registroService: RegistroService) {
-    this.usuario = new SignupDto('','','','');
+    this.usuario = {
+      username: '',
+      email: '',
+      password: '',
+      code: ''
+    };
+    //this.usuario = new SignupDto('','','','');
     
 
   }
@@ -48,13 +56,29 @@ export class RegistroComponent implements OnInit {
   
 
   registrarse(){
-    const user = { username: this.username, email: this.email, password: this.password, code: this.code};
-    console.log(user);
+    // const user = { username: this.username, email: this.email, password: this.password, code: this.code};
+    // console.log(user);
+
+    this.usuario.username = this.formreg.value.username;
+    this.usuario.email = this.formreg.value.email;
+    this.usuario.password = this.formreg.value.password;
+    this.usuario.code = this.formreg.value.code;
+
+    //console.log(this.usuario);
     
-    // this.registroService.signup(this.usuario).subscribe(respuesta => {
-    //   alert('API TOKEN ' + respuesta.token);
-    //   localStorage.setItem('token', respuesta.token);
-    // });
+    this.registroService.signup(this.usuario).subscribe(respuesta => {
+      //alert('API TOKEN ' + respuesta.token);
+      
+      this.submitted = true;
+      //localStorage.setItem('token', respuesta.token);
+    });
+
+    if(this.submitted){
+      alert("Se ha registrado correctamente, puede iniciar sesión");
+    }
+    else{
+      alert("Error, no se ha registrado correctamente, vuelva a intentarlo");
+    }
 
     // register() {
     //   const user = { email: this.email, password: this.password };
