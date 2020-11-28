@@ -36,7 +36,14 @@ h1 {
 //     color: white;
 //     border: 1px solid white;
 // }
-  
+div{
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+span, p{
+   font-weight: 400;
+   font-size: 15px;
+   line-height: 20px;
+}
 .encabezado {
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
@@ -66,7 +73,12 @@ i{
     height: 40%;
     
 }
+// .like{
+//     color:red;
+// }
+
 .icono:focus .like{
+    
     color: red;
 }
 
