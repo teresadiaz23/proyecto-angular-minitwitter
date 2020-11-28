@@ -10,9 +10,10 @@ import { AuthService } from '../../Services/auth.service';
 export class LoginComponent implements OnInit {
 
   usuario: LoginDto;
+  submitted = false;
 
   constructor(private authService: AuthService) {
-    this.usuario = new LoginDto('', '');
+   this.usuario = new LoginDto('', '');
     
   }
   //constructor(){} 
@@ -23,12 +24,22 @@ export class LoginComponent implements OnInit {
 
   doLogin() {
     this.authService.login(this.usuario).subscribe(respuesta => {
-      alert('API TOKEN ' + respuesta.token);
+      //alert('API TOKEN ' + respuesta.token);
       localStorage.setItem('token', respuesta.token);
+      this.submitted = true;
       
       
-    })
+    });
+
+    if(this.submitted){
+      alert("Ha iniciado sesión correctamente");
+    }
+    else{
+      alert("Error, no se ha podido iniciar sesión correctamente");
+    }
+    
   }
+  
 
 
 }

@@ -1,4 +1,4 @@
-<!-- <div class="login-page">
+<div class="login-page">
     <div class="row justify-content-md-center">
         <div class="col-md-4">
             <img class="user-avatar" src="assets/images/Twitter_Logo_Blue.png" width="150px" />
@@ -25,12 +25,12 @@
                          
                     </div>
                 </div>
-                <button (click)="doLogin()" class="btn rounded-btn">{{'Iniciar sesión'}}</button>
+                <button [routerLink]="['/tweets/all']" (click)="doLogin()" class="btn rounded-btn">{{'Iniciar sesión'}}</button>
                 
 
                 &nbsp;
-                <a [routerLink]="['/registro']" class="btn rounded-btn">{{'Registrarse'}}</a>
+                <a [routerLink]="['/signup']" class="btn rounded-btn">{{'Registrarse'}}</a>
            
         </div>
     </div>
-</div> -->
+</div>
