@@ -22,10 +22,7 @@
                     </div>
                    
                 </div>
-                <div class="form-group">
-                    <input [placeholder]="'Code'" name="code" class="form-control input-underline input-lg" type="text"
-                    [(ngModel)]="code" />
-                </div>
+                
                 <button type="submit" class="btn rounded-btn">Enviar</button>
                 &nbsp;
                 <a [routerLink]="['/login']" class="btn rounded-btn">Iniciar Sesión</a>
@@ -33,76 +30,3 @@
         </div>
     </div>
 </div> 
-
-<!-- <div class="login-page">
-    <div class="row justify-content-md-center">
-        <div class="col-md-4">
-            <img class="user-avatar" src="assets/images/Twitter_Logo_Blue.png" width="150px" />
-            <h1>Registro Usuario</h1>
-            <form role="form" method="post">
-         
-                <div class="form-content">
-                    <div class="form-group">
-                        <input [placeholder]="'Username'" name="username" class="form-control input-underline input-lg" type="text"
-                        [(ngModel)]="username" />
-                    </div>
-
-                    <div class="form-group">
-                        <input [placeholder]="'Email'" name="email" class="form-control input-underline input-lg" type="email"
-                        [(ngModel)]="email" required/>
-                    </div>
-
-                    <div class="form-group">
-                        <input [placeholder]="'Password'" name="password" class="form-control input-underline input-lg" type="password"
-                        [(ngModel)]="password"/>
-                    </div>
-                    
-                </div>
-                <div class="form-group">
-                    <input [placeholder]="'Code'" name="code" class="form-control input-underline input-lg" type="text"
-                    [(ngModel)]="code" />
-                </div>
-                <button type="submit" (click)="registrarse()" class="btn rounded-btn">Enviar</button>
-                &nbsp;
-                <a [routerLink]="['/login']" class="btn rounded-btn">Iniciar Sesión</a>
-            </form>
-        </div>
-    </div>
-</div> -->
-<!-- <div class="login-page">
-    <div class="row justify-content-md-center">
-        <div class="col-md-4">
-            <img class="user-avatar" src="assets/images/Twitter_Logo_Blue.png" width="150px" />
-            <h1>Registro Usuario</h1>
-            <form role="form" (ngSubmit)="doSignup()" [formGroup]="nuevoUsuario">
-                <div class="form-content">
-                    <div class="form-group">
-                        <input matInput [placeholder]="'Username'" formControlName="username" 
-                        class="form-control input-underline input-lg" type="text"/>
-                    </div>
-
-                    <div class="form-group">
-                        <input matInput [placeholder]="'Email'" class="form-control input-underline input-lg" type="email"
-                        formControlName="email" required [email]="true"/>
-                    </div>
-
-                    <div class="form-group">
-                        <input matInput [placeholder]="'Password'" class="form-control input-underline input-lg" type="password"
-                        formControlName="password"/>
-                    </div>
-                    <div class="form-group">
-                        <input [placeholder]="'Repetir Password'" class="form-control input-underline input-lg" type="password"
-                        />
-                    </div>
-                    <div class="form-group">
-                        <input matInput [value]="'UDEMYCODE'" readonly formControlName="code" 
-                        class="form-control input-underline input-lg" type="text"/>
-                    </div>
-                </div>
-                <button (click)="doSignup()" class="btn rounded-btn">Enviar</button>
-                &nbsp;
-                <a [routerLink]="['/login']" class="btn rounded-btn">Iniciar Sesión</a>
-            </form>
-        </div>
-    </div>
-</div> -->

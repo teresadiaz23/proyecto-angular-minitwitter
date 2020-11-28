@@ -56,18 +56,13 @@ export class RegistroComponent implements OnInit {
   
 
   registrarse(){
-    // const user = { username: this.username, email: this.email, password: this.password, code: this.code};
-    // console.log(user);
 
     this.usuario.username = this.formreg.value.username;
     this.usuario.email = this.formreg.value.email;
     this.usuario.password = this.formreg.value.password;
-    this.usuario.code = this.formreg.value.code;
+    this.usuario.code = 'UDEMYANDROID';
 
-    //console.log(this.usuario);
-    
     this.registroService.signup(this.usuario).subscribe(respuesta => {
-      //alert('API TOKEN ' + respuesta.token);
       
       this.submitted = true;
       //localStorage.setItem('token', respuesta.token);
@@ -80,29 +75,7 @@ export class RegistroComponent implements OnInit {
       alert("Error, no se ha registrado correctamente, vuelva a intentarlo");
     }
 
-    // register() {
-    //   const user = { email: this.email, password: this.password };
-    //   this.userService.register(user).subscribe(data => {
-    //     console.log(data);
-    //   });
-    // }
-    // console.log(this.usuario.email);
-    // console.log(this.usuario.username);
-    // for (const key in this.usuario) {
-    //   if (Object.prototype.hasOwnProperty.call(this.usuario, key)) {;
-    //     console.log(key, this.usuario[key]);
-    //   }
-    // }
     
   }
-  // doSignup(){
-  //   this.submitted = true;
-  //   for (const key in this.usuario) {
-  //     if (Object.prototype.hasOwnProperty.call(this.usuario, key)) {
-  //       console.log(key, this.usuario[key])
-        
-  //     }
-  //   }
-  // }
   
 }
