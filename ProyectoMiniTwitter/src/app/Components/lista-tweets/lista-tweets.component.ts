@@ -10,6 +10,7 @@ import { TweetResponse } from "../../Interfaces/tweet-response.interface";
 export class ListaTweetsComponent implements OnInit {
 
   tweets: TweetResponse[];
+  likes: number;
 
   constructor(private tweetService: TweetService) {
     this.tweetService.tweets().subscribe(respuesta => {
@@ -22,6 +23,7 @@ export class ListaTweetsComponent implements OnInit {
 
 
   ngOnInit(): void {
+    //this.likes = this.tweets.likes.length();
   }
 
 

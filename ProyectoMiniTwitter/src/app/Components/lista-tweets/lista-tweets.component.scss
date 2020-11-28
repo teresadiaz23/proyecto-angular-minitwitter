@@ -47,10 +47,26 @@ h1 {
     background-color: white;
     
 }
-.fav{
+.gray{
     color: gray;
+    
 }
-.icono:hover{
+i{
+    font-size: 24px;
+}
+// .like{
+//     color: none;
+//     //border: 1px solid gray;
+//     font-size: 30px;
+// }
+// .icono:hover{
+//     color: red;
+// }
+.descripcion{
+    height: 40%;
+    
+}
+.icono:focus .like{
     color: red;
 }
 

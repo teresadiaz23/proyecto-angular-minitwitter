@@ -2,24 +2,49 @@
 <div class="container mb-5"></div>
 <div class="container mb-3 col-5" *ngFor="let tweet of tweets">
   <mat-card class="tweet">
-    <mat-card-header>
-      <div mat-card-avatar class="encabezado"></div>
-      <mat-card-title><span>{{tweet.user.username}}</span> <span class="text-secondary">{{tweet.user.email}}</span></mat-card-title>
-      <mat-card-subtitle></mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-        <p>
-          {{tweet.mensaje}}
-        </p>
-      </mat-card-content>
-    <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
-    
-    <mat-card-actions>
-      <button class="icono" mat-icon-button><mat-icon class="fav" aria-hidden="false">favorite_border</mat-icon></button>
-     
-      <button class="icono" mat-icon-button><mat-icon  aria-hidden="false">share</mat-icon></button>
+    <div class="d-flex">
+      <div mat-card-avatar class="encabezado">{{tweet.user.photoUrl}}</div>
+      <div class="col-10">
+        <mat-card-header>
       
-    </mat-card-actions>
+          <mat-card-title><span>{{tweet.user.username}}</span> <span class="text-secondary">{{tweet.user.email}}</span></mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="descripcion">
+            <p class="pl-3 pt-3">
+              {{tweet.mensaje}}
+            </p>
+          </mat-card-content>
+        <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+        
+        <mat-card-actions class="d-flex">
+          <div class="col-3">
+            <button class="icono btn"><i class="far fa-comment gray"></i></button>
+          </div>
+          <div class="col-3">
+            <button class="icono btn"><i class="fas fa-retweet gray"></i></button>
+          </div>
+          <div class="col-3">
+            <button class="icono btn" mat-icon-button><mat-icon class="gray like" aria-hidden="false">favorite</mat-icon>
+              <span class="gray">{{tweet.likes.length}}</span></button>
+          </div>
+          
+          <div class="col-3">
+            <button class="icono btn" mat-icon-button><mat-icon class="gray" aria-hidden="false">share</mat-icon></button>
+          </div>
+          
+          
+         
+          
+          
+          
+          <!-- <button class="btn"><i class="fas fa-heart like"></i></button> -->
+          <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span>
+          
+        </mat-card-actions>
+      </div>
+    </div>
+    
   </mat-card>
   
 </div>
