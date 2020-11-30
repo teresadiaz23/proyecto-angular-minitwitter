@@ -19,7 +19,6 @@ export class RegistroComponent implements OnInit {
     
     this.usuario = new SignupDto('','','','UDEMYANDROID');
     
-
   }
 
   
@@ -28,7 +27,6 @@ export class RegistroComponent implements OnInit {
   }
 
   
-  
 
   registrarse(){
 
@@ -36,7 +34,7 @@ export class RegistroComponent implements OnInit {
     this.registroService.signup(this.usuario).subscribe(respuesta => {
       
       this.submitted = true;
-      //localStorage.setItem('token', respuesta.token);
+      
     });
 
     if(this.submitted){

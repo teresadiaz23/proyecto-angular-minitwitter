@@ -14,10 +14,10 @@ export class LoginComponent implements OnInit {
 
   constructor(private authService: AuthService) {
    this.usuario = new LoginDto('', '');
-   //localStorage.setItem('token', undefined);
+   
     
   }
-  //constructor(){} 
+
 
 
   ngOnInit(): void {
@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
 
   doLogin() {
     this.authService.login(this.usuario).subscribe(respuesta => {
-      //alert('API TOKEN ' + respuesta.token);
+      
       localStorage.setItem('token', respuesta.token);
       this.submitted = true;
       alert("Ha iniciado sesión correctamente");
