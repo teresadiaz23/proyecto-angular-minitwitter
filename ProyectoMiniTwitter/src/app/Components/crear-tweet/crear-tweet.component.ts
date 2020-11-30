@@ -23,6 +23,7 @@ export class CrearTweetComponent implements OnInit {
   crearTweet(){
     this.createService.create(this.tweet).subscribe(respuesta => {
       this.submitted = true;
+      window.location.reload();
     })
   }
 
