@@ -5,7 +5,7 @@ $topnav-background-color: #222;
     z-index: 1000;
     top: 56px;
     left: 235px;
-    width: 235px;
+    width: 200px;
     margin-left: -235px;
     margin-bottom: 48px;
     border: none;
@@ -27,8 +27,13 @@ $topnav-background-color: #222;
             background: $topnav-background-color;
             border: 0;
             border-radius: 0;
-            color: #999;
+            
             text-decoration: none;
+            color: #fff;
+            font-weight: 700;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-size: 19px;
+            line-height: 25px;
 
             .fa {
                 margin-right: 10px;
@@ -36,13 +41,15 @@ $topnav-background-color: #222;
         }
 
         a:hover {
-            background: darken($topnav-background-color, 5%);
-            color: #fff;
+            background: rgb(23, 191, 99, 0.1);
+            color: #17bf63;
+            border-radius: 20px;
         }
 
         a.router-link-active {
-            background: darken($topnav-background-color, 5%);
-            color: #fff;
+            //background: darken($topnav-background-color, 5%);
+            color: #17bf63;
+            //border-radius: 20px;
         }
 
         .header-fields {
@@ -102,11 +109,16 @@ $topnav-background-color: #222;
                     border: 0 solid transparent;
 
                     a {
-                        color: #999;
+                        color: #fff;
+                        font-weight: 700;
+                        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                        font-size: 19px;
+                        line-height: 25px;
+    
                     }
 
                     a:hover {
-                        color: #fff;
+                        color: #17bf63;
                     }
                 }
 

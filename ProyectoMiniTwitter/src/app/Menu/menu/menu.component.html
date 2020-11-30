@@ -1,27 +1,17 @@
-<!-- <div>
-	<mat-toolbar>
-		<button class="col-xs-12 col-md-4 col-lg-3 mr-3" mat-raised-button color="accent" routerLink="/login">Login</button>
-		<button class="col-xs-12 col-md-4 col-lg-3 mr-3" mat-raised-button color="accent" routerLink="/registro">Registro</button>
-		<button class="col-xs-12 col-md-4 col-lg-3 mr-3" mat-raised-button color="accent" routerLink="/tweets">Lista de Tweets</button>
-	</mat-toolbar>
-</div> -->
-
 <nav class="sidebar">
-    <div class="list-group">
+    <div class="list-group d-flex align-items-start">
+        <img class="user-avatar align-self-center" src="assets/images/Twitter_Logo_Blue.png" width="50px" />
         
-        <a [routerLinkActive]="['router-link-active']" [routerLink]="['/login']" class="list-group-item">
-            <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;
-            <span>{{ 'Login'}}</span>
-        </a>
-        <a [routerLinkActive]="['router-link-active']" [routerLink]="['/registro']" class="list-group-item">
-            <i class="fa fa-fw fa-table"></i>&nbsp;
-            <span>{{ 'Registro'}}</span>
-        </a>
-        <a [routerLinkActive]="['router-link-active']" [routerLink]="['/tweets']" class="list-group-item">
-            <i class="fa fa-fw fa-edit"></i>&nbsp;
-            <span>{{ 'Lista de Tweets'}}</span>
-        </a>
         
+        <a [routerLinkActive]="['router-link-active']" [routerLink]="['/tweets/all']" class="list-group-item align-self-start">
+            <mat-icon aria-hidden="false">home</mat-icon>&nbsp;
+            <span>{{ 'Inicio'}}</span>
+        </a>
+
+        <a [routerLinkActive]="['router-link-active']" [routerLink]="['/login']" class="list-group-item align-self-start">
+            <mat-icon aria-hidden="false">login</mat-icon>&nbsp;
+            <span>{{ 'Salir'}}</span>
+        </a>
         
 
     </div>
