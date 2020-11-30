@@ -14,7 +14,7 @@ export class ListaTweetsComponent implements OnInit {
   tweets: TweetResponse[];
   likes: number;
   like = false;
-  //id: number;
+  
 
   constructor(private tweetService: TweetService, private router: Router) {
     this.tweetService.tweets().subscribe(respuesta => {
@@ -27,7 +27,7 @@ export class ListaTweetsComponent implements OnInit {
 
 
   ngOnInit(): void {
-    //this.likes = this.tweets.likes.length();
+    
   }
 
   darLike(id: LikeDto){
@@ -36,31 +36,10 @@ export class ListaTweetsComponent implements OnInit {
       this.like = true;
       window.location.reload();
     });
-    //this.router.navigate(["/tweets/all"]);
+    
     
   }
 
-  // salir(){
-  //   localStorage.setItem('token', null);
-  // }
-
-  // doLogin() {
-  //   this.authService.login(this.usuario).subscribe(respuesta => {
-  //     //alert('API TOKEN ' + respuesta.token);
-  //     localStorage.setItem('token', respuesta.token);
-  //     this.submitted = true;
-      
-      
-  //   });
-
-  //   if(this.submitted){
-  //     alert("Ha iniciado sesión correctamente");
-  //   }
-  //   else{
-  //     alert("Error, no se ha podido iniciar sesión correctamente");
-  //   }
-    
-  // }
 
 
   

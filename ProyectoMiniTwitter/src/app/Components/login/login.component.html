@@ -25,12 +25,9 @@
                          
                     </div>
                 </div>
-                <!-- <button [routerLink]="['/tweets/all']" (click)="doLogin()" class="btn rounded-btn">{{'Iniciar sesión'}}</button> -->
-                <!-- <button  [routerLink]="['/tweets/all']" [disabled]="!loginForm.form.valid" (click)="doLogin()" class="btn rounded-btn">{{'Iniciar sesión'}}</button> -->
                 
                 <button *ngIf="!submitted" [disabled]="!loginForm.form.valid" (click)="doLogin()" class="btn rounded-btn">{{'Iniciar sesión'}}</button>
                 <button *ngIf="submitted" [routerLink]="['/tweets/all']" class="btn btn-success inicio">{{'Ir a Inicio'}}</button>
-                <!-- <button *ngIf="submitted" [routerLink]="['/tweets/all']" (click)="doLogin()" class="btn rounded-btn">{{'Iniciar sesión'}}</button> -->
 
                 &nbsp;
                 <button *ngIf="!submitted" [routerLink]="['/signup']" class="btn rounded-btn">{{'Registrarse'}}</button>
