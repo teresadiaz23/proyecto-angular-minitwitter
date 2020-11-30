@@ -36,6 +36,10 @@ export class ListaTweetsComponent implements OnInit {
     });
   }
 
+  salir(){
+    localStorage.setItem('token', null);
+  }
+
   // doLogin() {
   //   this.authService.login(this.usuario).subscribe(respuesta => {
   //     //alert('API TOKEN ' + respuesta.token);
