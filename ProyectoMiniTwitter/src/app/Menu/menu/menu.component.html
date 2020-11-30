@@ -6,7 +6,7 @@
 	</mat-toolbar>
 </div> -->
 
-<nav class="sidebar">
+<!-- <nav class="sidebar">
     <div class="list-group d-flex align-items-start">
         <img class="user-avatar align-self-center" src="assets/images/Twitter_Logo_Blue.png" width="50px" />
         
@@ -23,6 +23,30 @@
             <span>{{ 'Inicio'}}</span>
         </a>
         
+        
+
+    </div>
+    
+</nav> -->
+<nav class="sidebar">
+    <div class="list-group d-flex align-items-start">
+        <img class="user-avatar align-self-center" src="assets/images/Twitter_Logo_Blue.png" width="50px" />
+        
+        <!-- 
+        
+        <a [routerLinkActive]="['router-link-active']" [routerLink]="['/signup']" class="list-group-item align-self-start">
+            <mat-icon aria-hidden="false">assignment_ind</mat-icon>&nbsp;
+            <span>{{ 'Registro'}}</span>
+        </a> -->
+        <a [routerLinkActive]="['router-link-active']" [routerLink]="['/tweets/all']" class="list-group-item align-self-start">
+            <mat-icon aria-hidden="false">home</mat-icon>&nbsp;
+            <span>{{ 'Inicio'}}</span>
+        </a>
+
+        <a [routerLinkActive]="['router-link-active']" [routerLink]="['/login']" class="list-group-item align-self-start">
+            <mat-icon aria-hidden="false">login</mat-icon>&nbsp;
+            <span>{{ 'Salir'}}</span>
+        </a>
         
 
     </div>

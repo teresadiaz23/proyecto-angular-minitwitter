@@ -2,8 +2,8 @@
     <div class="row justify-content-md-center">
         <div class="col-md-4">
             <img class="user-avatar" src="assets/images/Twitter_Logo_Blue.png" width="150px" />
-            <h1>Registro Usuario</h1>
-            <form role="form" (ngSubmit)="registrarse()" method="post">
+            <h1>Crear Cuenta</h1>
+            <form role="form" (ngSubmit)="registrarse()" method="POST">
                 
                 <div class="form-content">
                     <div class="form-group">
@@ -25,7 +25,7 @@
                 
                 <button type="submit" class="btn rounded-btn">Enviar</button>
                 &nbsp;
-                <a [routerLink]="['/login']" class="btn rounded-btn">Iniciar Sesión</a>
+                <button [routerLink]="['/login']" class="btn rounded-btn">Iniciar Sesión</button>
             </form>
         </div>
     </div>

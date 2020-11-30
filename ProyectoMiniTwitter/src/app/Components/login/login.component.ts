@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { LoginDto } from '../../DTO/login.dto';
 import { AuthService } from '../../Services/auth.service';
 
@@ -14,12 +14,14 @@ export class LoginComponent implements OnInit {
 
   constructor(private authService: AuthService) {
    this.usuario = new LoginDto('', '');
+   //localStorage.setItem('token', undefined);
     
   }
   //constructor(){} 
 
 
   ngOnInit(): void {
+    
   }
 
   doLogin() {
@@ -29,15 +31,12 @@ export class LoginComponent implements OnInit {
       this.submitted = true;
       alert("Ha iniciado sesión correctamente");
       
+    }, error => {
+      this.submitted = false;
+      alert("Error, no se ha podido iniciar sesión");
       
     });
 
-    // if(this.submitted){
-    //   alert("Ha iniciado sesión correctamente");
-    // }
-    // else{
-    //   alert("Error, no se ha podido iniciar sesión correctamente");
-    // }
     
   }
 
