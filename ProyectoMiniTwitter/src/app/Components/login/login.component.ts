@@ -27,18 +27,21 @@ export class LoginComponent implements OnInit {
       //alert('API TOKEN ' + respuesta.token);
       localStorage.setItem('token', respuesta.token);
       this.submitted = true;
+      alert("Ha iniciado sesión correctamente");
       
       
     });
 
-    if(this.submitted){
-      alert("Ha iniciado sesión correctamente");
-    }
-    else{
-      alert("Error, no se ha podido iniciar sesión correctamente");
-    }
+    // if(this.submitted){
+    //   alert("Ha iniciado sesión correctamente");
+    // }
+    // else{
+    //   alert("Error, no se ha podido iniciar sesión correctamente");
+    // }
     
   }
+
+  
   
 
 
