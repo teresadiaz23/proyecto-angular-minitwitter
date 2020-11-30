@@ -1,0 +1,19 @@
+.twittear{
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    color: #fff;
+        //background-color: rgb(29, 161, 242);
+        //border: 2px solid rgba(255, 255, 255, 0.8);
+    width: 25%;
+    font-size: 15px;
+    line-height: 49px;
+    padding: 0 25px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.tweet{
+    min-height: 180px;
+    max-height: 300px;
+    width: 100%;
+}
