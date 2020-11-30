@@ -1,12 +1,12 @@
-<!-- <div class="login-page">
+<div class="login-page">
     <div class="row justify-content-md-center">
         <div class="col-md-4">
             <img class="user-avatar" src="assets/images/Twitter_Logo_Blue.png" width="150px" />
             <h1>Iniciar Sesión</h1>
-            
+            <form action="">
                 <div class="form-content">
                     <div class="form-group">
-                        <input [placeholder]="'Email'" class="form-control input-underline input-lg" type="email"
+                        <input [placeholder]="'Email'" name="email" class="form-control input-underline input-lg" type="email"
                         [(ngModel)]="usuario.email" #em="ngModel" required [email]="true"/>
                         
                         <div [hidden]="em.valid || em.pristine" class="alert alert-danger">
@@ -16,7 +16,7 @@
                     </div>
 
                     <div class="form-group">
-                        <input [placeholder]="'Contraseña'" class="form-control input-underline input-lg" type="password"
+                        <input [placeholder]="'Contraseña'" name="password" class="form-control input-underline input-lg" type="password"
                         [(ngModel)]="usuario.password" #pwd="ngModel" pattern="[0-9]{4,6}" required/>
                         <div [hidden]="pwd.valid || pwd.pristine" class="alert alert-danger">
                             <p *ngIf="pwd.errors?.required"> El campo contraseña es requerido.</p>
@@ -30,7 +30,7 @@
 
                 &nbsp;
                 <a [routerLink]="['/signup']" class="btn rounded-btn">{{'Registrarse'}}</a>
-           
+           </form>
         </div>
     </div>
-</div> -->
+</div>

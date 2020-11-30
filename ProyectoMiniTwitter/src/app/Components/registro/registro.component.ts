@@ -1,9 +1,8 @@
-//import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { SignupDto } from "../../DTO/signup.dto";
 import { RegistroService } from '../../Services/registro.service';
-//import { FormBuilder} from '@angular/forms';
+
 
 @Component({
   selector: 'app-registro',
@@ -12,56 +11,28 @@ import { RegistroService } from '../../Services/registro.service';
 })
 export class RegistroComponent implements OnInit {
 
-  @ViewChild('formreg') formreg: NgForm;
-  usuario: any;
+  usuario: SignupDto;
   submitted = false;
-  // username: string;
-  // email: string;
-  // password: string;
-  // code: string;
   
 
   constructor(private registroService: RegistroService) {
-    this.usuario = {
-      username: '',
-      email: '',
-      password: '',
-      code: ''
-    };
-    //this.usuario = new SignupDto('','','','');
+    
+    this.usuario = new SignupDto('','','','UDEMYANDROID');
     
 
   }
 
-  // constructor(private registroService: RegistroService, private formBuilder: FormBuilder) {
-
-  //  }
-
+  
   ngOnInit():void {
 
   }
 
-  // ngOnInit(): void {
-
-  //   this.usuario = this.formBuilder.group({
-  //     username: [''],
-  //     email: [''],
-  //     password: [''],
-  //     code: ['UDEMYCODE']
-  //   });
-
-    
-  // }
-
+  
   
 
   registrarse(){
 
-    this.usuario.username = this.formreg.value.username;
-    this.usuario.email = this.formreg.value.email;
-    this.usuario.password = this.formreg.value.password;
-    this.usuario.code = 'UDEMYANDROID';
-
+    
     this.registroService.signup(this.usuario).subscribe(respuesta => {
       
       this.submitted = true;

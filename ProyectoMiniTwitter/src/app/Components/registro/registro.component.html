@@ -1,24 +1,24 @@
-<!-- <div class="login-page">
+<div class="login-page">
     <div class="row justify-content-md-center">
         <div class="col-md-4">
             <img class="user-avatar" src="assets/images/Twitter_Logo_Blue.png" width="150px" />
             <h1>Registro Usuario</h1>
-            <form role="form" (ngSubmit)="registrarse()" #formreg="ngForm" method="post">
+            <form role="form" (ngSubmit)="registrarse()" method="post">
                 
                 <div class="form-content">
                     <div class="form-group">
                         <input [placeholder]="'Username'" name="username" class="form-control input-underline input-lg" type="text"
-                        [(ngModel)]="username" />
+                        [(ngModel)]="usuario.username" />
                     </div>
 
                     <div class="form-group">
                         <input [placeholder]="'Email'" name="email" class="form-control input-underline input-lg" type="email"
-                        [(ngModel)]="email" required/>
+                        [(ngModel)]="usuario.email" required/>
                     </div>
 
                     <div class="form-group">
                         <input [placeholder]="'Password'" name="password" class="form-control input-underline input-lg" type="password"
-                        [(ngModel)]="password"/>
+                        [(ngModel)]="usuario.password"/>
                     </div>
                    
                 </div>
@@ -29,4 +29,4 @@
             </form>
         </div>
     </div>
-</div>  -->
+</div> 
