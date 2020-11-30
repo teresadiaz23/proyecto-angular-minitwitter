@@ -16,6 +16,8 @@ import { MenuComponent } from './Menu/menu/menu.component';
 import { AuthService } from './Services/auth.service';
 import { RegistroService } from "./Services/registro.service";
 import { TweetService } from "./Services/tweet.service";
+import { CrearTweetComponent } from './Components/crear-tweet/crear-tweet.component';
+import { CreateService } from "./Services/create.service";
 
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatSidenavModule } from "@angular/material/sidenav";
@@ -23,6 +25,8 @@ import { MatCardModule } from "@angular/material/card";
 import { MatIconModule } from "@angular/material/icon";
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, FormBuilder} from '@angular/forms';
+import { RouterModule } from "@angular/router";
+
 
 
 
@@ -35,7 +39,8 @@ import { FormsModule, FormBuilder} from '@angular/forms';
     RegistroUsuarioComponent,
     ListaTweetsComponent,
     VisualizarTweetsComponent,
-    MenuComponent
+    MenuComponent,
+    CrearTweetComponent
   ],
   imports: [
     BrowserModule,
@@ -47,9 +52,10 @@ import { FormsModule, FormBuilder} from '@angular/forms';
     MatCardModule,
     MatIconModule,
     FlexLayoutModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
-  providers: [AuthService, RegistroService, TweetService],
+  providers: [AuthService, RegistroService, TweetService, CreateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

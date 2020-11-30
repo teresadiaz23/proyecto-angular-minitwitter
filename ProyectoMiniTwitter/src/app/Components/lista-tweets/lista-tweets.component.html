@@ -1,13 +1,22 @@
 <app-menu></app-menu>
-<main><h1>Inicio</h1>
+<main><h1 class="mb-3">Inicio</h1>
+  <app-crear-tweet></app-crear-tweet>
+  <div class="container mb-3 col-5">
+    
+    
+  </div>
+  
   <!-- <a href="" class="salir" [routerLink]="['/']" (click)="salir()">Salir</a> -->
   <!-- <button class="btn btn-danger col-2 salir" mat-icon-button (click)="salir()" [routerLink]="['/']" value="Salir">Salir</button> -->
   <!-- <button (click)="salir()">Salir</button> -->
-<div class="container mb-5"></div>
+
 <div class="container mb-3 col-5" *ngFor="let tweet of tweets">
   <mat-card class="tweet">
     <div class="d-flex">
       <div mat-card-avatar class="encabezado">{{tweet.user.photoUrl}}</div>
+      <!-- <div mat-card-avatar>{{tweet.user.photoUrl}}
+        <img src="https://api.adorable.io/avatars/64/{{tweet.user.username}}@gmail.com.png'" />
+      </div> -->
       <div class="col-10">
         <mat-card-header>
       
@@ -30,7 +39,7 @@
           </div>
           <div class="d-flex col-3">
             <!-- <button class="icono btn" mat-icon-button (click)="darLike(tweet.id)"><mat-icon class="gray like" aria-hidden="false">favorite</mat-icon></button> -->
-            <button class="icono btn" mat-icon-button (click)="darLike(tweet.id)"><mat-icon class="fav gray" aria-hidden="false">favorite</mat-icon></button>
+            <button class="icono btn" mat-icon-button (click)="darLike(tweet.id)"><mat-icon class="fav like gray" aria-hidden="false">favorite</mat-icon></button>
               <div class="d-flex align-items-end"><p class="gray">{{tweet.likes.length}}</p></div>
           </div>
           

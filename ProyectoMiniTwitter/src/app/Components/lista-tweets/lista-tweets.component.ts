@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LikeDto } from 'src/app/DTO/like.dto';
 import { TweetService } from 'src/app/Services/tweet.service';
 import { TweetResponse } from "../../Interfaces/tweet-response.interface";
@@ -15,7 +16,7 @@ export class ListaTweetsComponent implements OnInit {
   like = false;
   //id: number;
 
-  constructor(private tweetService: TweetService) {
+  constructor(private tweetService: TweetService, private router: Router) {
     this.tweetService.tweets().subscribe(respuesta => {
       this.tweets = respuesta as TweetResponse[];
     });
@@ -33,12 +34,15 @@ export class ListaTweetsComponent implements OnInit {
     this.tweetService.like(id).subscribe(respuesta => {
       alert("Like correcto");
       this.like = true;
+      window.location.reload();
     });
+    //this.router.navigate(["/tweets/all"]);
+    
   }
 
-  salir(){
-    localStorage.setItem('token', null);
-  }
+  // salir(){
+  //   localStorage.setItem('token', null);
+  // }
 
   // doLogin() {
   //   this.authService.login(this.usuario).subscribe(respuesta => {

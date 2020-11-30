@@ -1,0 +1,29 @@
+<div class="container mb-3 col-5">
+    <mat-card class="tweet">
+      <div class="d-flex">
+        <div mat-card-avatar class="encabezado"></div>
+        <div class="col-10">
+          
+          <mat-card-content class="descripcion">
+              <form action="">
+                <div class="form-group">
+                    <input [placeholder]="'¿Qué está pasando?'" name="mensaje" class="form-control input-underline input-lg mensaje" type="text"
+                    [(ngModel)]="tweet.mensaje" />
+                </div>
+              </form>
+            </mat-card-content>
+          <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+          
+          <mat-card-actions class="d-flex col-12">
+            <button class="btn btn-success twittear" (click)="crearTweet()">Twittear</button>
+           
+            
+          </mat-card-actions>
+        </div>
+      </div>
+      
+    </mat-card>
+    
+  </div>
+
+
