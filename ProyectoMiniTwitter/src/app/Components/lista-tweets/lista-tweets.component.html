@@ -6,17 +6,12 @@
     
   </div>
   
-  <!-- <a href="" class="salir" [routerLink]="['/']" (click)="salir()">Salir</a> -->
-  <!-- <button class="btn btn-danger col-2 salir" mat-icon-button (click)="salir()" [routerLink]="['/']" value="Salir">Salir</button> -->
-  <!-- <button (click)="salir()">Salir</button> -->
 
 <div class="container mb-3 col-5" *ngFor="let tweet of tweets">
   <mat-card class="tweet">
     <div class="d-flex">
       <div mat-card-avatar class="encabezado">{{tweet.user.photoUrl}}</div>
-      <!-- <div mat-card-avatar>{{tweet.user.photoUrl}}
-        <img src="https://api.adorable.io/avatars/64/{{tweet.user.username}}@gmail.com.png'" />
-      </div> -->
+      
       <div class="col-10">
         <mat-card-header>
       
@@ -28,7 +23,6 @@
               {{tweet.mensaje}}
             </p>
           </mat-card-content>
-        <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
         
         <mat-card-actions class="d-flex botones">
           <div class="col-3">
@@ -38,18 +32,13 @@
             <button class="icono btn"><i class="fas fa-retweet gray"></i></button>
           </div>
           <div class="d-flex col-3">
-            <!-- <button class="icono btn" mat-icon-button (click)="darLike(tweet.id)"><mat-icon class="gray like" aria-hidden="false">favorite</mat-icon></button> -->
             <button class="icono btn" mat-icon-button (click)="darLike(tweet.id)"><mat-icon class="fav like gray" aria-hidden="false">favorite</mat-icon></button>
               <div class="d-flex align-items-end"><p class="gray">{{tweet.likes.length}}</p></div>
           </div>
           
           <div class="col-3">
             <button class="icono btn" mat-icon-button><mat-icon class="gray" aria-hidden="false">share</mat-icon></button>
-          </div>
-          
-          
-          <!-- <button class="btn"><i class="fas fa-heart like"></i></button> -->
-         
+          </div>         
           
         </mat-card-actions>
       </div>
